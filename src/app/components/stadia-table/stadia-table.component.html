@@ -1,0 +1,24 @@
+<div class="container">
+
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Capacity</th>
+            <th>Foundation</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let s of stadiums">
+            <td>{{s._id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.country}}</td>
+            <td>{{s.capacity}}</td>
+            <td>{{s.foundation}}</td>
+            <td>
+                <button class="btn btn-warning" (click)="editStadium(s._id)">Edit</button>
+            </td>
+        </tr>
+    </table>
+</div>

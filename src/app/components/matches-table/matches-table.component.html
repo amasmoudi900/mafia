@@ -1,0 +1,30 @@
+<div class="container">
+    <form>
+        <input type="text" [(ngModel)]="term" name="team">
+    </form>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Score One</th>
+            <th>Score Two</th>
+            <th>Team One</th>
+            <th>Team Two</th>
+            <th>Stadium</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let m of matches | myFilter:term">
+            <td>{{m._id}}</td>
+            <td>{{m.scoreOne}}</td>
+            <td>{{m.scoreTwo}}</td>
+            <td>{{m.teamOne}}</td>
+            <td>{{m.teamTwo}}</td>
+            <td>{{m.stadium}}</td>
+            <td>
+                <button class="btn btn-info" (click)="displayMatch(m._id)">Display</button>
+                <button class="btn btn-warning" (click)="editMatch(m._id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteMatch(m._id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

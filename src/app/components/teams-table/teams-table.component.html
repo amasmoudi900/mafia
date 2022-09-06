@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Stadium</th>
+            <th>Owner</th>
+            <th>Foundation</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let t of teams">
+            <td>{{t.id}}</td>
+            <td>{{t.name}}</td>
+            <td>{{t.stadium}}</td>
+            <td>{{t.owner}}</td>
+            <td>{{t.foundation}}</td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

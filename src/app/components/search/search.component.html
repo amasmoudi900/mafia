@@ -1,0 +1,26 @@
+<app-banner title="Search Match"></app-banner>
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #searchForm="ngForm" (ngSubmit)="search()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="match.teamOne" name="teamOne" placeholder="Team One">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="match.teamTwo" name="teamTwo" placeholder="Team Two">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let a of matches">
+    <app-score [matchInput]="a"></app-score>
+</div>
