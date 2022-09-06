@@ -50,6 +50,7 @@ Countdown with zero trigger:
                         <input type="submit" class="btn btn-primary py-3 px-5" [disabled]="signupForm.invalid" (click)="signup()" value="Signup">
                     </div>
                 </form>
+                <!-- Two pipes  -->
                 {{signupForm.value | json}}
                 {{signupForm.valid | json}}
             </div>
